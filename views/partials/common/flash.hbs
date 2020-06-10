@@ -1,0 +1,20 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.11.0/sweetalert2.all.min.js"></script>
+<script>
+  function makeToast(type, msg) {
+    swal({
+      type: type,
+      title: msg,
+      toast: true,
+      position: 'bottom-start',
+      showConfirmButton: false,
+      timer: 8000
+    });
+  }
+</script>
+
+
+<script>
+    {{#each flash}}
+        makeToast('{{this.type}}', '{{this.message}}');
+    {{/each}}
+</script>

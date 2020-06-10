@@ -1,0 +1,15 @@
+<nav class="site-navigation text-right text-md-center" role="navigation">
+  <ul class="site-menu js-clone-nav d-none d-lg-block">
+    <li {{#if homeActive}}class="active" {{/if}}><a href="/">Home</a></li>
+    <li {{#if storeActive}}class="active" {{/if}}><a href="/store">Store</a></li>
+    <li {{#if aboutActive}}class="active" {{/if}}><a href="/about">About</a></li>
+    <li {{#if contactActive}}class="active" {{/if}}><a href="/contact">Contact</a></li>
+    {{#if loggedIn}}
+    <li {{#if orderActive}}class="active" {{/if}}><a href="/orders">My Orders</a></li>
+    <li><a href="/logout">Logout</a></li>
+    {{else}}
+    <li {{#if loginActive}}class="active" {{/if}}><a href="/login">Login</a></li>
+    <li {{#if registerActive}}class="active" {{/if}}><a href="/register">Register</a></li>
+    {{/if}}
+  </ul>
+</nav>

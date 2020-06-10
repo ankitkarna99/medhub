@@ -1,0 +1,33 @@
+<ul class="nav">
+  <li class="nav-item{{#if active_dashboard}} active{{/if}}">
+    <a class="nav-link" href="/admin/">
+      <i class="material-icons">dashboard</i>
+      <p>Dashboard</p>
+    </a>
+  </li>
+  <li class="nav-item{{#if active_products}} active{{/if}}">
+    <a class="nav-link" href="/admin/products">
+      <i class="material-icons">category</i>
+      <p>Products</p>
+    </a>
+  </li>
+  <li class="nav-item{{#if active_orders}} active{{/if}}">
+    <a class="nav-link" href="/admin/orders">
+      <i class="material-icons">view_list</i>
+      <p>Orders</p>
+    </a>
+  </li>
+  <li class="nav-item{{#if active_contact}} active{{/if}}">
+    <a class="nav-link" href="/admin/messages">
+      <i class="material-icons">message</i>
+      <p>Contact Messages</p>
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/admin/logout">
+      <i class="material-icons">power_settings_new</i>
+      <p>Logout</p>
+    </a>
+  </li>
+  <!-- your sidebar here -->
+</ul>

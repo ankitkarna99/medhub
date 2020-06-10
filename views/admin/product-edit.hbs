@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-md-5">
+    <div class="card">
+      <div class="card-header card-header-primary">
+        <h4 class="card-title ">Edit Product</h4>
+      </div>
+      <div class="card-body">
+        <form action="" method="post" accept-charset="UTF-8" enctype="multipart/form-data">
+          <br>
+          Title: <br>
+          <input type="text" class="form-control" placeholder="Title" name="title" value="{{product.title}}"><br>
+          Price: <br>
+          <input type="text" class="form-control" placeholder="Price" name="price" value="{{product.price}}"><br>
+          Description: <br>
+          <textarea class="form-control" placeholder="Description"
+            name="description">{{product.description}}</textarea><br>
+          Available: <br>
+          <select class="form-control" name="in_stock">
+            <option value="1" {{#if product.in_stock}}selected{{/if}}>Yes</option>
+            <option value="0" {{#unless product.in_stock}}selected{{/unless}}>No</option>
+          </select><br>
+          New Image (optional):<br>
+          <input type="file" name="image" />
+          <br>
+          <br>
+          <div class="text-right">
+            <button class="btn btn-primary" type="submit">Edit Product</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

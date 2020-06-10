@@ -1,0 +1,7 @@
+<div class="col-sm-6 col-lg-4 text-center item mb-4">
+  {{#unless in_stock}}<span class="tag">Not In Stock</span>{{/unless}}
+  <a href="/product/{{id}}">
+    <img src="{{image_url}}" style="width: 270px; height: 370px; object-fit: contain;" alt="Image" /></a>
+  <h3 class="text-dark"><a href="/product/{{id}}">{{title}}</a></h3>
+  <p class="price">Rs. {{price}}</p>
+</div>

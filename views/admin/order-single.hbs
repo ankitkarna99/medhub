@@ -1,0 +1,80 @@
+<div class="row">
+  <div class="col-md-5">
+    <div class="card">
+      <div class="card-header card-header-primary">
+        <h4 class="card-title ">Change Status</h4>
+      </div>
+      <div class="card-body">
+        <form action="" method="post" accept-charset="UTF-8">
+          <br>
+          Status: <br>
+          <select name="status" id="" class="form-control">
+            <option value="Pending" {{#if pendingStatus }}selected{{/if}}>Pending</option>
+            <option value="Approved" {{#if approvedStatus }}selected{{/if}}>Approved</option>
+            <option value="Declined" {{#if declinedStatus }}selected{{/if}}>Declined</option>
+            <option value="Dispatched" {{#if dispatchedStatus }}selected{{/if}}>Dispatched</option>
+            <option value="Delivered" {{#if deliveredStatus }}selected{{/if}}>Delivered</option>
+          </select> <br>
+          <div class="text-right">
+            <button class="btn btn-primary" type="submit">Change Status</button>
+          </div>
+        </form>
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header card-header-primary">
+        <h4 class="card-title ">Bill Details</h4>
+      </div>
+      <div class="card-body">
+
+        <h4><b></b></h4>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Product</th>
+              <th scope="col">Price</th>
+              <th scope="col">Quantity</th>
+              <th scope="col">Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each ordersItems}}
+            <tr>
+              <td>{{title}}</td>
+              <td>Rs. {{price}}</td>
+              <td>{{quantity}}</td>
+              <td>Rs. {{total}}</td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header card-header-primary">
+        <h4 class="card-title ">Order Details</h4>
+      </div>
+      <div class="card-body">
+        <b>Order #:</b> {{order.created_at}}<br><br>
+        <b>Name:</b> {{order.name}}<br><br>
+        <b>Email:</b> {{order.email}}<br><br>
+        <b>Phone Number:</b> {{order.phone_number}}<br><br>
+        <b>Order Date:</b> {{order.formatted_date}}<br><br>
+        <b>Order Status:</b> {{order.status}} <br><br>
+        <b>Grand Total:</b> Rs. {{total}} <br><br>
+      </div>
+    </div>
+  </div>
+</div>

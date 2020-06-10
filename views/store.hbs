@@ -1,0 +1,31 @@
+<div class="bg-light py-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 mb-0"><a href="/">Home</a> <span class="mx-2 mb-0">/</span>
+        {{#if search}}
+        <a href="/store">Store</a> <span class="mx-2 mb-0">/</span>
+        <strong class="text-black">Search</strong></div>
+      {{else}}
+      <strong class="text-black">Store</strong>
+      {{/if}}
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="site-section">
+  <div class="container">
+    <div class="row">
+      {{#each products}}
+      {{>product}}
+      {{/each}}
+    </div>
+
+    <div class="mt-5 text-center">
+      {{#unless search}}
+      <div class="lead">Use search to find more medicines.</div>
+      {{/unless}}
+    </div>
+
+    </>
+  </div>

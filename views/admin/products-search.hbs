@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header card-header-primary">
+        <h4 class="card-title ">Search Results</h4>
+      </div>
+      <div class="card-body">
+        <form action="/admin/products/search" method="get" accept-charset="UTF-8">
+          <br>
+          <input type="text" class="form-control" placeholder="Search Keyword" name="query" value="{{query}}"><br>
+          <br>
+          <div class="text-right">
+            <button class="btn btn-primary" type="submit">Search</button>
+          </div>
+        </form>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Title</th>
+              <th scope="col">Price</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each products}}
+            <tr>
+              <td>{{id}}</td>
+              <td>{{title}}</td>
+              <td>{{price}}</td>
+              <td>
+                <a href="/admin/products/edit/{{id}}"><button class="btn btn-info btn-sm">Edit</button></a>
+                <a href="/admin/products/delete/{{id}}"><button class="btn btn-danger btn-sm">Delete</button></a>
+              </td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>MedHub - Your first choice for online medicine purchase!</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  {{> styles}}
+</head>
+
+<body>
+  <div class="site-wrap">
+    <div class="site-navbar py-2">
+      <div class="search-wrap">
+        <div class="container">
+          <a href="#" class="search-close js-search-close"><span class="icon-close2"></span></a>
+          <form action="/store/search" method="get">
+            <input type="text" class="form-control" placeholder="Search keyword and hit enter..." name="query"
+              autocomplete="off" value="{{query}}" />
+          </form>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="logo">
+            <div class="site-logo">
+              <a href="/" class="js-logo-clone">
+                <img src="/images/logo.png" style="height: 5rem;">
+              </a>
+            </div>
+          </div>
+          <div class="main-nav d-none d-lg-block">
+            {{>nav}}
+          </div>
+          <div class="icons">
+            <a href="#" class="icons-btn d-inline-block js-search-open"><span class="icon-search"></span></a>
+            {{#if loggedIn}}
+            <a href="/cart" class="icons-btn d-inline-block bag">
+              <span class="icon-shopping-bag"></span>
+              <span class="number">{{cartCount}}</span>
+            </a>
+            {{/if}}
+            <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span
+                class="icon-menu"></span></a>
+          </div>
+        </div>
+      </div>
+    </div>
